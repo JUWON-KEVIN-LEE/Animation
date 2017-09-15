@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.immymemine.kevin.animation.JoystickActivity">
+
+    <FrameLayout
+        android:id="@+id/layoutGround"
+        android:layout_width="0dp"
+        android:layout_height="387dp"
+        tools:layout_editor_absoluteY="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:id="@+id/btnP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Player"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="168dp" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutJoyStick"
+        android:layout_width="368dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:id="@+id/btnD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="move"
+            android:text="▼"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+        <Button
+            android:id="@+id/btnL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnD"
+            android:layout_toLeftOf="@+id/btnD"
+            android:layout_toStartOf="@+id/btnD"
+            android:onClick="move"
+            android:text="◀"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <Button
+            android:id="@+id/btnR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/btnD"
+            android:layout_toRightOf="@+id/btnD"
+            android:onClick="move"
+            android:text="▶"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <Button
+            android:id="@+id/btnU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnD"
+            android:layout_centerHorizontal="true"
+            android:onClick="move"
+            android:text="▲"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
